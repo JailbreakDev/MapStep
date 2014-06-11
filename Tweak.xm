@@ -69,7 +69,7 @@
 
 %ctor {
 
-	NSString *bundleID = [[NSBundle mainBundle].bundleIdentifier;
+	NSString *bundleID = [NSBundle mainBundle].bundleIdentifier;
 	if (bundleID && [bundleID isEqualToString:@"com.apple.springboard"]) {
 		SRMapStep *mapStep = [[SRMapStep alloc] init]; //it is running all the time to receive our notifications
 		[[NSDistributedNotificationCenter defaultCenter] addObserver:mapStep selector:@selector(notificationReceived:) name:nil object:nil];
